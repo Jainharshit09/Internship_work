@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign-Up Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://imgs.search.brave.com/CWIo5ZL0c2Fyd0v-HDReCWC4CS0F2bl6ygKqLJBCi88/rs:fit:32:32:1:0/g:ce/aHR0cDovL2Zhdmlj/b25zLnNlYXJjaC5i/cmF2ZS5jb20vaWNv/bnMvMGYyYjgxYWM5/MTQzOTMyMzAwYjM0/Y2EzYmNkOTMxMzlh/M2M5ZjVjM2IxYTU1/ZjhmZTJjMWZmYTkz/YjU0MTJjMi93d3cu/Y3liZXJhZWdpcy5p/bi8" alt="Logo">
+        <div class="tabs">
+            <div class="tab" id="signup-tab" onclick="showSignUp()">SIGN UP</div>
+            <div class="tab active" id="login-tab" onclick="showLogin()">LOGIN</div>
+        </div>
+        <div class="login-form" id="login-form">
+            <p>Already have an account?</p>
+            <button class="google-login">
+                <img src="https://www.google.com/images/hpp/ic_wahlberg_product_core_48.png8.png" alt="Google Logo">
+                <span>Continue with Google</span>
+            </button>
+            <div class="divider"><span>OR</span></div>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" placeholder="Username or Email">
+            <div class="password-field">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" placeholder="Password">
+                <span class="show-password" onclick="togglePassword('login-password')">Show</span>
+            </div>
+            <a href="forget-password.html" id="forgot-password-link">Forgot Password?</a>
+            <button class="login-button" onclick="login()">LOGIN</button>
+        </div>
+        <div class="sign-up-form" id="signup-form" style="display: none;">
+            <p>Create Your Account</p>
+            <button class="google-login">
+                <img src="https://www.google.com/images/hpp/ic_wahlberg_product_core_48.png8.png" alt="Google Logo">
+                <span>Continue with Google</span>
+            </button>
+            <div class="divider"><span>OR</span></div>
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" placeholder="Username">
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" placeholder="Email">
+            <div class="password-field">
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" placeholder="Password">
+                <span class="show-password" onclick="togglePassword('signup-password')">Show</span>
+            </div>
+            <div class="terms">
+                <label><input type="checkbox" id="terms"> I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</label>
+            </div>
+            <button class="sign-up-button" onclick="register()">REGISTER</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
